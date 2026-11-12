@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(/Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(/Fonts/Manrope/Manrope-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(/Fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url(/Fonts/Syne/Syne-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    @apply dark:text-white;
+  }
+}
+
+@theme{
+    --color-prim-green: #134E4A;
+    --color-sec-green: #34666F;
+    --color-third-green: #0F766E;
+    --color-light-green: #2DD4BF;
+    --color-dark-prim-bg: #001016;
+    --color-dark-ashy: #8c9ab1;
+    --font-manrope: "Manrope", system-ui, sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-syne: "Syne", system-ui, sans-serif;
+    --font-manrope: "JetBrains Mono", system-ui, sans-serif;
+}
+
+:root{
+    --prim-green: #134E4A;
+    --sec-green: #34666F;
+    --third-green: #0F766E;
+    --light-green: #2DD4BF;
+    --dark-prim-bg: #001016;
+    --dark-ashy: #8c9ab1;
+    /* Headings (fluid scale) */
+    --h1: clamp(2.2rem, 5vw, 3.5rem); /* very large hero */
+    --h2: clamp(1.8rem, 4vw, 2.8rem);
+    --h3: clamp(1.5rem, 3.2vw, 2.2rem);
+    --h4: clamp(1.25rem, 2.5vw, 1.8rem);
+    --h5: clamp(1.1rem, 2vw, 1.4rem);
+    --h6: clamp(1rem, 1.5vw, 1.2rem);
+
+    /* Body text */
+    --p: clamp(0.95rem, 1.2vw, 1.125rem);
+
+    /* Optional extras */
+    --small: clamp(0.8rem, 1vw, 0.95rem);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+a{
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
